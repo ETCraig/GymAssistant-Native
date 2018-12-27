@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import Landing from './src/components/Landing';
+import Landing from './src/components/Landing/Landing';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
 const instructions = Platform.select({
