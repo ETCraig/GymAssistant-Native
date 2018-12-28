@@ -28,12 +28,12 @@ class Landing extends Component {
                 <Image 
                     style={{
                         flex: 1,
-                        resizeMode,
-                        width: width
+                        resizeMode: 'cover'
                     }}
                     source={{uri: remote}}
                 />
                 </View>
+                <Text style={styles.header}>Welcome to <Text style={styles.appName}>Gym Assistant!</Text></Text>
                 <View
                     style={{
                         flex: 1,
@@ -41,16 +41,17 @@ class Landing extends Component {
                         justifyContent: 'center',
                     }}
                 >
-                <Text style={styles.header}>Welcome to <Text style={styles.appName}>Gym Assistant!</Text></Text>
                 <Text style={styles.bodyText}>Keep track of your personal fitness goals, and take advantage of two custom made calculators.</Text>
-                <Button
-                    title='Login' 
-                    style={styles.button}
-                />
-                <Button 
-                    title='Register'
-                    style={styles.button}
-                />
+                    <View style={styles.btnContainer}>
+                    <Button
+                        title='Login' 
+                        style={styles.btn}
+                    />
+                    <Button 
+                        title='Register'
+                        style={styles.btn}
+                    />
+                    </View>
                 </View>
             </View>
         );
