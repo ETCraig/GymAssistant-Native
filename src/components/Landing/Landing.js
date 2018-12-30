@@ -42,15 +42,13 @@ class Landing extends Component {
                     }}
                 >
                 <Text style={styles.bodyText}>Keep track of your personal fitness goals, and take advantage of two custom made calculators.</Text>
-                    <View style={styles.btnContainer}>
-                    <Button
-                        title='Login' 
-                        style={styles.btn}
-                    />
-                    <Button 
-                        title='Register'
-                        style={styles.btn}
-                    />
+                    <View style={styles.container}>
+                        <View style={styles.btnContainer}>
+                            <Button title='Login' />
+                        </View>
+                        <View style={styles.btnContainer}>
+                            <Button title='Register' />
+                        </View>
                     </View>
                 </View>
             </View>

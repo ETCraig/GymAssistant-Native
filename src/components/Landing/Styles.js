@@ -3,14 +3,16 @@ import {Dimensions, StyleSheet} from 'react-native';
 const {width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-    btnContainer: {
-        width: '100%',
-        height: '30%',
-        justifyContent: 'center',
-        alignItems: 'center'
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around'
     },
-    btn: {
-        margin: '20%'
+    btnContainer: {
+    //    flex: 1,
+       width: '40%',
+       height: 40
     },
     header: {
         fontSize: 28,
@@ -25,7 +27,8 @@ const styles = StyleSheet.create({
     bodyText: {
         fontSize: 18,
         color: '#fff',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 40
     }  
 });
 
