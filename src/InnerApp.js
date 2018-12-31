@@ -1,30 +1,16 @@
-import React from 'react';
-import {View} from 'react-native';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Navigation from '../actions/Navigation';
-import {Root} from 'native-base';
-import {StyleSheet} from 'react-native';
+// import navigation from '../actions/Navigation';
+// import {Root, View} from 'native-base';
+// import {setCurrentUser} from '../actions/authActions';
+// import {StyleSheet} from 'react-native';
 
-import {LoginStack, InnerStack} from './Router';
+import LoginStack from './Router';
 
-class InnerApp extends React.Component {
-    state = {
-        bool: false
-    }
+class InnerApp extends Component {
     render() {
-        let NavigationStack = bool ? (
-            <Root>
-                <InnerStack 
-                    ref={navigatorRef => {
-                        Navigation.setTopLevelNavigator(navigatorRef);
-                    }}
-                />
-            </Root>
-        ) : (
-            <LoginStack />
-        );
         return(
-            NavigationStack
+            <LoginStack />
         );
     }
 }
