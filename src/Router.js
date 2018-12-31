@@ -2,27 +2,42 @@ import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 
 //Components
 import Landing from './components/Landing/Landing';
-
-// export const InnerStack = createStackNavigator(
-//     {
-//         GoalModel: GoalModel,
-//         repCalc: repCalc,
-//         bmiCalc: bmiCalc
-//     },
-//     {
-//         navigationOptions: {
-//             header: null
-//         }
-//     }
-// );
+import Login from './components/Login';
+import Register from './components/Register';
 
 export const LoginStack = createStackNavigator(
     {
-        Landing: Landing
+        Landing: {
+            screen: Landing,
+            navigationOptions: {
+                title: "",
+                header: null
+            }
+        },
+        Login: {
+            screen: Login,
+            navigationOptions: {
+                title: "Login"
+            }
+        },
+        Register: {
+            screen: Register,
+            navigationOptions: {
+                title: "Register"
+            }
+        }
     },
     {
+        initialRouteName: "Start",
         navigationOptions: {
-            header: null
+            headerBackTitle: null,
+            headerTitleStyle: {
+                fontWeight: "normal"
+            },
+            headerStyle: {
+                backgroundColor: "00b1f3"
+            },
+            headerTintColor: "white"
         }
-    }    
+    }
 );
