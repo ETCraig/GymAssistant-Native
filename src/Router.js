@@ -5,30 +5,14 @@ import Landing from './components/Landing/Landing';
 import Login from './components/Login';
 import Register from './components/Register';
 
-// //Authorized Components
-// import BMICalc from './components/bmiCalculator';
-// import GoalList from './components/GoalList';
-// import Goals from './components/GoalsModel';
-// import REPCalc from './components/repCalculator';
-
-// export const InnerStack = createStackNavigator(
-//     {  
-//         Goals: Goals,
-//         GoalList: GoalList,
-//         REPCalc: REPCalc,
-//         BMICalc: BMICalc
-//     },
-//     {
-//         navigationOptions: {
-//             header: null
-//         }
-//     }
-// );
-
-const LoginStack = createStackNavigator(
+export const LoginStack = createStackNavigator(
     {
         Landing: {
             screen: Landing,
+            navigationOptions: {
+                title: '',
+                header: null
+            }
         },
         Login: {
             screen: Login,
@@ -39,6 +23,16 @@ const LoginStack = createStackNavigator(
     },
     {
         initialRouteName: "Landing",
+        navigationOptions: {
+            headerBackTitle: null,
+            headerTitleStyle: {
+                fontWeight: "normal"
+            },
+            headerStyle: {
+                backgroundColor: "00b1f3"
+            },
+            headerTintColor: "white"
+        }
     }
 );
 
