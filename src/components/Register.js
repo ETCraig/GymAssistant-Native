@@ -26,6 +26,12 @@ class Register extends Component {
                     />
                 </View>
                 <Button title='Create Account' />
+                <Button 
+                    onPress={() => {
+                        this.props.navigation.navigate('Goals')
+                    }}
+                    title='Goals'
+                />
             </View>
         );
     }

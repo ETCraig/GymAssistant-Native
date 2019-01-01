@@ -18,6 +18,12 @@ class Login extends Component {
                         />
                     </View>
                     <Button title='Login' />
+                    <Button 
+                        title='REP-Calculator'
+                        onPress={() => {
+                            this.props.navigation.navigate('REPcalc')
+                        }}
+                    />
             </View>
         );
     }
