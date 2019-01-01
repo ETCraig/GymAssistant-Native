@@ -44,10 +44,20 @@ class Landing extends Component {
                 <Text style={styles.bodyText}>Keep track of your personal fitness goals, and take advantage of two custom made calculators.</Text>
                     <View style={styles.container}>
                         <View style={styles.btnContainer}>
-                            <Button title='Login' />
+                            <Button 
+                                title='Login' 
+                                onPress={() => {
+                                    this.props.navigation.navigate('Login')
+                                }}
+                            />
                         </View>
                         <View style={styles.btnContainer}>
-                            <Button title='Register' />
+                            <Button 
+                                title='Register' 
+                                onPress={() => {
+                                    this.props.navigation.navigate('Register')
+                                }}
+                            />
                         </View>
                     </View>
                 </View>
