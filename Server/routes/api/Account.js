@@ -42,3 +42,5 @@ router.get('/handle/:handle', (req, res) => {
         })
     .catch(err => res.status(404).json({account: 'This account does not exist.'}));
 });
+
+module.exports = router;
